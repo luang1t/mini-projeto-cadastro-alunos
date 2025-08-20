@@ -1,12 +1,11 @@
 import os
 #os.system('cls')
-numero_alunos = 0
 nomes = []
 notas = []
 while True:
     print("="*6+" Menu Principal "+"="*6)
     print("="*28)
-    print("1 - CADASTRAR ALUNO E NOTA\n2 - ATUALIZAR DADOS\n3 - MOSTRAR MÉDIA DA TURMA\n4 - MOSTRAR DADOS\n0 - SAIR")
+    print("1 - CADASTRAR ALUNO E NOTA\n2 - ATUALIZAR DADOS\n3 - MOSTRAR MÉDIA DA TURMA\n4 - MOSTRAR DADOS\n5 - NOMES E NOTAS\n0 - SAIR")
     print("="*28)
     seletor = int(input("Digite aqui: "))
     os.system('cls')
@@ -20,6 +19,7 @@ while True:
 
             seletor_cadastro = int(input("Digite aqui: "))
             if seletor_cadastro == 1:
+                os.system('cls')
                 nome_aluno = str(input("Digite o nome do aluno: "))
                 nomes.append(nome_aluno)
                 nota_aluno = float(input(f"Digite a nota do {nome_aluno}: "))
@@ -28,6 +28,7 @@ while True:
                 print(f"Aluno: {nome_aluno}\nNota: {nota_aluno}\nCADASTRADO!")
 
             elif seletor_cadastro == 0:
+                os.system('cls')
                 break
 
             else:
@@ -65,6 +66,7 @@ while True:
                             print(f"Nome alterado!")
                             print("Deseja alterar a nota:\n1 - Sim\n0 - Não")
                             seletor_altera_nota = int(input("Digite aqui: "))
+                            os.system('cls')
 
                             if seletor_altera_nota == 1:
                                 nova_nota = float(input(f"Digite a nova nota de {nomes[i]}: "))
@@ -106,6 +108,7 @@ while True:
                         elemento_nome = str(input("Digite o elemento (Nome) que você deseja alterar a nota: "))
 
             elif seletor_altera == 0:
+                os.system('cls')
                 break
 
             else:
@@ -116,8 +119,11 @@ while True:
                 seletor_altera = int(input("Digite aqui: "))                                                                                       
 
     elif seletor == 3:
-        print(f"A média da turma foi: {sum(notas)/len(notas)}")
-        
+        if len(notas) == 0:
+            print("Nenhuma nota foi inserida.")
+        else:    
+            print(f"A média da turma foi: {sum(notas)/len(notas)}")
+
     elif seletor == 4:
         for i in range(len(notas)):
             if notas[i]>=7:
