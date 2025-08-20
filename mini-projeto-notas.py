@@ -48,6 +48,7 @@ while True:
             print("="*27)
 
             seletor_altera = int(input("Digite aqui: "))
+            os.system('cls')
             if seletor_altera == 1:
 
                 elemento_nome = str(input("Digite o elemento (Nome) que você deseja alterar: "))
@@ -88,7 +89,8 @@ while True:
                                 os.system('cls')
                 else:
                         print(f"{elemento_nome} não encontrado, tente novamente!")
-                        elemento_nome = str(input("Digite o elemento (Nome) que você deseja alterar o nome: "))        
+                        elemento_nome = str(input("Digite o elemento (Nome) que você deseja alterar o nome: "))
+                        os.system('cls')        
 
             elif seletor_altera == 2:
 
@@ -106,6 +108,7 @@ while True:
                     else:
                         print(f"{elemento_nome} não encontrado, tente novamente!")
                         elemento_nome = str(input("Digite o elemento (Nome) que você deseja alterar a nota: "))
+                        os.system('cls')
 
             elif seletor_altera == 0:
                 os.system('cls')
@@ -116,7 +119,8 @@ while True:
                 print("="*27)
                 print("1 - ALTERAR NOME ALUNO\n2 - ALTERAR NOTA\n0 - Sair")
                 print("="*27)
-                seletor_altera = int(input("Digite aqui: "))                                                                                       
+                seletor_altera = int(input("Digite aqui: ")) 
+                os.system('cls')                                                                                      
 
     elif seletor == 3:
         if len(notas) == 0:
@@ -143,6 +147,7 @@ while True:
         print("="*27)
         print("1 - CADASTRAR ALUNO E NOTA\n2 - ATUALIZAR DADOS\n3 - MOSTRAR MÉDIA DA TURMA\n4 - MOSTRAR DADOS\n0 - SAIR")
         print("="*27)
-        seletor = int(input("Digite aqui: "))                        
+        seletor = int(input("Digite aqui: "))
+        os.system('cls')                        
 
 
